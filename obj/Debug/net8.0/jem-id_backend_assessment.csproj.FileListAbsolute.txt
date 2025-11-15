@@ -130,3 +130,4 @@ C:\Users\Maxhb\Desktop\assessment\jem-id_backend_assessment\obj\Debug\net8.0\ref
 C:\Users\Maxhb\Desktop\assessment\jem-id_backend_assessment\obj\Debug\net8.0\jem-id_backend_assessment.pdb
 C:\Users\Maxhb\Desktop\assessment\jem-id_backend_assessment\obj\Debug\net8.0\jem-id_backend_assessment.genruntimeconfig.cache
 C:\Users\Maxhb\Desktop\assessment\jem-id_backend_assessment\obj\Debug\net8.0\ref\jem-id_backend_assessment.dll
+C:\Users\Maxhb\Desktop\assessment\jem-id_backend_assessment\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

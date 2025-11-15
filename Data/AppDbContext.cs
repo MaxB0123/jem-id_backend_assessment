@@ -1,45 +1,45 @@
-﻿using jem_id_backend_assessment.Models;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using jem_id_backend_assessment.Models;
 
 namespace jem_id_backend_assessment.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<IdentityUser>
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
     {
     }
-    
-    public DbSet<ArticleModel.Article> Articles => Set<ArticleModel.Article>();
+
+    public DbSet<Article> Articles => Set<Article>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
-        // Optional: explicit config for Article
-        modelBuilder.Entity<ArticleModel.Article>(entity =>
-        {
-            entity.HasKey(a => a.Id);
-            
-            entity.HasIndex(a => a.Code)
-                .IsUnique();
+        var article = modelBuilder.Entity<Article>();
 
-            entity.Property(a => a.Code)
-                .IsRequired()
-                .HasMaxLength(13);
+        article.HasKey(a => a.Id);
 
-            entity.Property(a => a.Name)
-                .IsRequired()
-                .HasMaxLength(50);
+        article.HasIndex(a => a.Code)
+            .IsUnique();
 
-            entity.Property(a => a.PotSize)
-                .IsRequired();
+        article.Property(a => a.Code)
+            .IsRequired()
+            .HasMaxLength(13);
 
-            entity.Property(a => a.PlantHeight)
-                .IsRequired();
+        article.Property(a => a.Name)
+            .IsRequired()
+            .HasMaxLength(50);
 
-            entity.Property(a => a.ProductGroup)
-                .IsRequired();
-        });
+        article.Property(a => a.PotSize)
+            .IsRequired();
+
+        article.Property(a => a.PlantHeight)
+            .IsRequired();
+
+        article.Property(a => a.ProductGroup)
+            .IsRequired();
     }
 }
