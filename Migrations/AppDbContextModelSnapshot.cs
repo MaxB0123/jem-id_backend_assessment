@@ -211,7 +211,7 @@ namespace jem_id_backend_assessment.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("jem_id_backend_assessment.Models.ArticleModel+Article", b =>
+            modelBuilder.Entity("jem_id_backend_assessment.Models.Article", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
