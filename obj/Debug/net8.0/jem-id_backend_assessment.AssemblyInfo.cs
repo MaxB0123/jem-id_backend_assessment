@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("jem-id_backend_assessment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+428ef715a765ccb328afb5baba57c3b2cdef7a9f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d13b752c8f6727da65f65d49f581878dad64ad10")]
 [assembly: System.Reflection.AssemblyProductAttribute("jem-id_backend_assessment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("jem-id_backend_assessment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
