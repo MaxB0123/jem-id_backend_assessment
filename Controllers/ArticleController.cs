@@ -44,8 +44,17 @@ public class ArticlesController : ControllerBase
     [Authorize]
     public async Task<IActionResult> UpdateArticle(int id, UpdateArticleDto dto)
     {
-        var updated = await _service.UpdateArticleAsync(id, dto);
-        return updated ? NoContent() : NotFound();
+        try
+        {
+            var updated = await _service.UpdateArticleAsync(id, dto);
+            return updated ? await GetArticleById(id) : NotFound();
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine(ex);
+
+            return StatusCode(500, new { message = "An unexpected server error occurred." });
+        }
     }
 
     [HttpDelete("{id:int}")]
